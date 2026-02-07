@@ -1,0 +1,45 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-surface: #1a1a2e;
+  --color-surface-raised: #1f1f35;
+  --color-surface-hover: #25253d;
+  --color-border: #2a2a45;
+  --color-border-subtle: #22223a;
+  --color-text-primary: #e8e8f0;
+  --color-text-secondary: #9898b0;
+  --color-text-muted: #6868808;
+  --color-accent: #6366f1;
+  --color-accent-light: #818cf8;
+  --color-success: #22c55e;
+  --color-success-bg: #22c55e1a;
+  --color-warning: #f59e0b;
+  --color-warning-bg: #f59e0b1a;
+  --color-error: #ef4444;
+  --color-error-bg: #ef44441a;
+  --color-info: #3b82f6;
+  --color-info-bg: #3b82f61a;
+
+  --font-mono: 'SF Mono', 'Fira Code', 'JetBrains Mono', monospace;
+}
+
+body {
+  background-color: #12121f;
+  color: var(--color-text-primary);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  min-height: 100dvh;
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+@keyframes slide-up {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-slide-up {
+  animation: slide-up 0.3s ease-out;
+}
